@@ -1,0 +1,165 @@
+body {
+    font-family: 'Alegreya Sans SC', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+#logo {
+    max-width: 425px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav_links a, .nav_links a:visited{
+    color: blue;
+}
+.card > header {
+    background-color: #288088;
+    border: solid 2px #45adad;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+}
+.pricing {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+    flex-grow: 0;
+    justify-content: space-between;
+    align-self: center;
+
+}
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+@keyframes logo {
+    from {
+        width: 50px;
+        opacity: 0;
+    }
+    to {
+        width: 425px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation-name: logo;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@media only screen and (min-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 100%;
+        position: fixed;
+        top: 0;
+    }
+    main h1{
+        margin-top: 100px;
+    }
+    .card header {
+        position: static;
+        width: auto;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        flex-basis: 250px;
+        justify-items:center; 
+    }
+}
+
+@media (prefers-reduced-motion) {
+    #logo {
+        animation-delay: -10s;
+    }
+}
+
+@media print {
+    body {
+        background-image: none;
+        background-color: #f1f1f1;
+    }
+    .gallery, #gallery{
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-items:flex-end; 
+        
+    }
+    .card {
+        display: flex;
+        flex-basis: 250px;
+        border: 2px solid #45ADDD;
+        justify-items:center;
+        align-self:flex-end;
+        
+    }
+    .pricing li:first-of-type:before {
+        content: "\1F44D";
+    }
+    .pricing li:nth-child(2):after {
+        content: "\1F44D";
+    }
+    .pricing li:nth-child(3):before {
+        content: "\1F44D";
+    }
+}
